@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <style>
+        *{padding: 0px;margin: 0px;box-sizing: border-box;}
+        #box,#box2{
+            width: 800px;
+            height: 360px;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #box>#imgbox,#box2>#imgbox2{
+            position: absolute;
+            left: 0px;
+            height: 100%;
+        }
+        #box>#imgbox>img,#box2>#imgbox2>img{
+            display: block;
+            float: left;
+            width: 800px;
+            height: 360px;
+        }
+        #box>#slideImg,#box2>#slideImg2{
+            height: 80px;
+            width: 100%;
+            position: absolute;
+            top: 140px;
+            padding: 0 40px;
+        }
+        #box>#slideImg>span,#box2>#slideImg2>span{
+            display: block;
+            line-height: 32px;
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            font-size: 46px;
+            color: #8A2BE2;
+            background: rgba(138,214,20,.2);
+        }
+        #box>#slideImg>#left,#left2{
+            float: left;
+        }
+        #box>#slideImg>#right,#right2{
+            float: right;
+        }
+        #box>#btn,#box2>#btn2{
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+        }
+        #box>#btn>#btnContent>span,#box2>#btn2>#btnContent2>span{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid #000000;
+            background: rgba(10,103,246,.2);
+            line-height: 40px;
+            margin: 0 4px;
+        }
+        .active{
+            background: greenyellow !important;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var swiper1 = new sSlide(box,imgbox,left,right,btn,btnContent);
+            swiper1.getLoad();
+            var swiper2 = new sSlide(box2,imgbox2,left2,right2,btn2,btnContent2);
+            swiper2.getLoad();
+        })
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div id="imgbox">
+            <img src="../img/092104.jpg" alt=""/>
+            <img src="../img/092101.jpg" alt=""/>
+            <img src="../img/092102.jpg" alt=""/>
+            <img src="../img/092103.jpg" alt=""/>
+            <img src="../img/092105.jpg" alt=""/>
+        </div>
+        <div id="slideImg">
+            <span id="left"> < </span>
+            <span id="right"> > </span>
+        </div>
+        <div id="btn">
+            <div id="btnContent">
+            </div>
+        </div>
+    </div>
+
+    <div id="box2">
+        <div id="imgbox2">
+            <img src="../img/092104.jpg" alt=""/>
+           <!-- <img src="../img/092101.jpg" alt=""/>
+            <img src="../img/092102.jpg" alt=""/>-->
+            <img src="../img/092103.jpg" alt=""/>
+            <img src="../img/092105.jpg" alt=""/>
+        </div>
+        <div id="slideImg2">
+            <span id="left2"> < </span>
+            <span id="right2"> > </span>
+        </div>
+        <div id="btn2">
+            <div id="btnContent2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
